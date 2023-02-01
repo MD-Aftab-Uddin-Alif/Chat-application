@@ -7,21 +7,19 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if(kIsWeb){
-    await Firebase.initializeApp(options: FirebaseOptions(
-        apiKey: Constants.apiKey,
-        appId: Constants.appId,
-        messagingSenderId: Constants.messagingSenderId,
-        projectId: Constants.projectId));
-  }
-  else{
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: Constants.apiKey,
+            appId: Constants.appId,
+            messagingSenderId: Constants.messagingSenderId,
+            projectId: Constants.projectId));
+  } else {
     await Firebase.initializeApp();
   }
-
 
   runApp(const MyApp());
 }
@@ -32,9 +30,10 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
+//next commit
 
 class _MyAppState extends State<MyApp> {
-  bool _isSignedIn=false;
+  bool _isSignedIn = false;
 
   @override
   void initState() {
@@ -43,11 +42,11 @@ class _MyAppState extends State<MyApp> {
     getUserLoggedInStatus();
   }
 
-  getUserLoggedInStatus() async{
+  getUserLoggedInStatus() async {
     await HelperFunctions.getUserLoggedInStatus().then((value) {
-      if(value!=null){
+      if (value != null) {
         setState(() {
-          _isSignedIn=value;
+          _isSignedIn = value;
         });
       }
     });
@@ -64,7 +63,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: _isSignedIn ? const HomePage() : const LoginPage(),
       routes: {
-        Requests.routeName:(context) => const Requests(),
+        Requests.routeName: (context) => const Requests(),
       },
     );
   }
