@@ -79,7 +79,7 @@ class _RequestsState extends State<Requests> {
                           ],
                         ),
                         const SizedBox(
-                          width: 20,
+                          width: 10,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
@@ -134,11 +134,11 @@ class _RequestsState extends State<Requests> {
                                     });
                               },
                               child: const Padding(
-                                padding: EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(5.0),
                                 child: Text(
                                   'Accept',
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 15,
                                   ),
                                 ),
                               ),
@@ -160,11 +160,11 @@ class _RequestsState extends State<Requests> {
                                 });
                               },
                               child: const Padding(
-                                padding: EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(5.0),
                                 child: Text(
                                   'Decline',
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 15,
                                   ),
                                 ),
                               ),

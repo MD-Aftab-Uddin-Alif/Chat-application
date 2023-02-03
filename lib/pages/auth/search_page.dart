@@ -66,20 +66,33 @@ class _SearchPageState extends State<SearchPage> {
       body: Column(
         children: [
           Container(
-            color: Theme.of(context).primaryColor,
+            color: Colors.white,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Row(
               children: [
                 Expanded(
-                  child: TextField(
+                  child:
+                  // TextField(
+                  //   decoration: InputDecoration(
+                  //     border: OutlineInputBorder(
+                  //       borderRadius: BorderRadius.circular(30),
+                  //       borderSide: BorderSide.none,
+                  //     ),
+                  //     fillColor: Color(0xffc2c2c2),
+                  //     filled: true,
+                  //     hintText: "Search for items in the store",
+                  //     suffixIcon: Icon(Icons.search),
+                  //   ),
+                  // ),
+                  TextField(
                     controller: searchController,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: "Search groups.....",
-                      hintStyle: TextStyle(color: Colors.white, fontSize: 16),
+                      hintStyle: TextStyle(color: Colors.black, fontSize: 16),
                     ),
                   ),
                 ),
@@ -96,7 +109,7 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                     child: const Icon(
                       Icons.search,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ),

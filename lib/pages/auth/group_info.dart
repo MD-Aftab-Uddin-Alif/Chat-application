@@ -139,7 +139,7 @@ class _GroupInfoState extends State<GroupInfo> {
                         ),
                       ),
                       title: Text(getName(snapshot.data['members'][index])),
-                      subtitle: Text(getId(snapshot.data['members'][index])),
+                      //subtitle: Text(getId(snapshot.data['members'][index])),
                       trailing: widget.adminId ==
                               FirebaseAuth.instance.currentUser!.uid
                           ? widget.adminId !=
@@ -164,6 +164,9 @@ class _GroupInfoState extends State<GroupInfo> {
                                     });
                                   },
                                   child: const Text('Remove'),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.red,
+                        ),
                                 )
                               : ElevatedButton(
                                   onPressed: () async {
@@ -184,6 +187,9 @@ class _GroupInfoState extends State<GroupInfo> {
                                     });
                                   },
                                   child: const Text('Left'),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.orange,
+                        ),
                                 )
                           : FirebaseAuth.instance.currentUser!.uid ==
                                   getId(snapshot.data['members'][index])
