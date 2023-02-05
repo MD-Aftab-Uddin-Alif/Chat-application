@@ -186,7 +186,7 @@ class _GroupInfoState extends State<GroupInfo> {
                                           "Left the group");
                                     });
                                   },
-                                  child: const Text('Left'),
+                                  child: const Text('Leave'),
                         style: ElevatedButton.styleFrom(
                           primary: Colors.orange,
                         ),
@@ -222,7 +222,10 @@ class _GroupInfoState extends State<GroupInfo> {
                                           "Left the group");
                                     });
                                   },
-                                  child: const Text('Left'),
+                                  child: const Text('Leave'),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.red,
+                        ),
                                 )
                               : const Text(''),
                     ),
